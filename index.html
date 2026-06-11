@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroBolso - Gestão Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌱 AgroBolso</div>
+        <p>Gestão Simples para a Agricultura Familiar</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card alerta-clima">
+            <h2>🌧️ Alerta de Clima & Manejo</h2>
+            <div class="status-clima">
+                <span class="badge badge-atencao">Atenção</span>
+                <p><strong>Previsão de Chuva Forte para os próximos 2 dias.</strong></p>
+            </div>
+            <p class="recomendacao">Evite aplicar adubos ou defensivos agora, pois a água pode lavá-los. Reforce as valas de drenagem dos canteiros.</p>
+        </section>
+
+        <section class="card">
+            <h2>📊 Calculadora "Lucro Certo"</h2>
+            <p class="sub-g">Descubra o preço ideal de venda do seu produto.</p>
+            
+            <form id="calc-form">
+                <div class="form-group">
+                    <label for="insumos">Gasto com Insumos (Sementes, adubo, água) - R$:</label>
+                    <input type="number" id="insumos" placeholder="Ex: 150.00" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="logistica">Gasto com Logística (Combustível, frete, feira) - R$:</label>
+                    <input type="number" id="logistica" placeholder="Ex: 50.00" step="0.01" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="producao">Quantidade Produzida (em kg ou caixas):</label>
+                    <input type="number" id="producao" placeholder="Ex: 100" required>
+                </div>
+
+                <button type="button" onclick="calcularPreço()">Calcular Preço de Venda</button>
+            </form>
+
+            <div id="resultado" class="resultado hidden">
+                <h3>Preços Sugeridos para Venda (por unidade):</h3>
+                <div class="precos-grid">
+                    <div class="preco-item m20">
+                        <span>Margem Segura (20%)</span>
+                        <strong id="preco20">R$ 0,00</strong>
+                    </div>
+                    <div class="preco-item m40">
+                        <span>Margem Ideal (40%)</span>
+                        <strong id="preco40">R$ 0,00</strong>
+                    </div>
+                </div>
+                <p class="obs">*O custo base por unidade produzida foi de: <span id="custo-base">R$ 0,00</span></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>📈 Painel de Preços da Região</h2>
+            <p class="sub-g">Média de preços praticada no mercado regional.</p>
+            
+            <div class="tabela-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Unidade</th>
+                            <th>Preço Médio</th>
+                            <th>Tendência</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alface Crespa</td>
+                            <td>Dúzia</td>
+                            <td>R$ 24,00</td>
+                            <td class="alta">▲ Subiu</td>
+                        </tr>
+                        <tr>
+                            <td>Tomate Italiano</td>
+                            <td>Caixa (20kg)</td>
+                            <td>R$ 85,00</td>
+                            <td class="baixa">▼ Caiu</td>
+                        </tr>
+                        <tr>
+                            <td>Batata Doce</td>
+                            <td>Quilo</td>
+                            <td>R$ 4,50</td>
+                            <td class="estavel">= Estável</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 AgroBolso - Projeto para o Agrinho</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

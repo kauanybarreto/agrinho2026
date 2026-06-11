@@ -1,0 +1,207 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Topo do Site */
+header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Cards de Conteúdo */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1b5e20;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.sub-g {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+/* Alerta de Clima */
+.alerta-clima {
+    border-left: 5px solid #f39c12;
+}
+
+.status-clima {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-atencao {
+    background-color: #f39c12;
+}
+
+.recomendacao {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2e7d32;
+}
+
+button {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Resultados da Calculadora */
+.hidden {
+    display: none;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #ecf0f1;
+}
+
+.resultado h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.precos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.preco-item {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.preco-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.preco-item strong {
+    font-size: 1.3rem;
+    color: #2e7d32;
+}
+
+.m20 { background-color: #e8f5e9; }
+.m40 { background-color: #c8e6c9; }
+
+.obs {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+/* Tabela da Ceasa */
+.tabela-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f1f8e9;
+    color: #33691e;
+}
+
+.alta { color: #27ae60; font-weight: bold; }
+.baixa { color: #c0392b; font-weight: bold; }
+.estavel { color: #7f8c8d; font-weight: bold; }
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
